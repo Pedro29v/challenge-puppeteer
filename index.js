@@ -6,7 +6,9 @@ const port = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(cors({ origin: CORS_URL, credentials: true }));
+app.use(
+  cors({ origin: "https://dollar-blue-price.vercel.app", credentials: true })
+);
 app.use(express.json());
 app.use(router);
 
