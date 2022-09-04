@@ -3,7 +3,7 @@ const { allData } = require("../quotes/fullData");
 const sentAllData = async (req, res) => {
   try {
     const { quotes } = await allData();
-    console.log("hola");
+
     return res.json(quotes);
   } catch (error) {
     console.error(error);
