@@ -7,7 +7,7 @@ async function getValuesAmbito() {
   await page.goto("https://www.ambito.com/contenidos/dolar.html", {
     timeout: 0,
   }); */
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
   await page.goto("https://www.ambito.com/contenidos/dolar.html");
